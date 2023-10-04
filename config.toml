@@ -1,0 +1,88 @@
+title = "Coding and Stuff"
+author = "Chris Pilkington"
+copyright = "Copyright ©, Chris Pilkington; all rights reserved."
+theme = 'm10c'
+#theme = 'ananke'
+paginate = 10
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+relativeURLs = true
+
+[params]
+  author = "Chris Pilkington"
+  description = "With Chris Pilkington"
+  favicon = "../favicon.ico"
+  avatar = "/images/avatar.jpg"
+  menu_item_separator = " - "
+  [[params.social]]
+    icon = "github"
+    name = "Github"
+    url = "https://github.com/pilkch"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "../"
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archives"
+    pageRef = "/"
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    pageRef = "tags"
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "about"
+
+[permalinks]
+  # Configure paths for blog entries
+  blog = '/:year/:month/:day/:title/'
+
+[taxonomies]
+  tag = "tags"
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = true
+    simple = true
+
+  [privacy.twitter]
+    disabled = true
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = true
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+
+# Site map of all articles
+[sitemap]
+  filename = "sitemap.xml"
+  changefreq = "weekly"
+  priority = 0.1
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "rss"
+
+# By default use local search
+[outputs]
+  home = ["HTML", "RSS"]
+
+# Enable robots with support for crawling
+enableRobotsTXT = true
